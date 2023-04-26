@@ -68,3 +68,6 @@ public class SpecialClient extends Actor {
     public void setReturnMoney() {
         // TODO Auto-generated method stub
     }
+}
+
+
