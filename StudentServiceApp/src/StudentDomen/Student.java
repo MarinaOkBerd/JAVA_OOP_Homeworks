@@ -28,7 +28,7 @@ public class Student extends User implements Comparable<Student>{
     @Override
     public int compareTo(Student o){
         
-        System.out.println(super.getFirstName() + " - " + o.getFirstName());
+        //System.out.println(super.getFirstName() + " - " + o.getFirstName());
          if(super.getAge() == o.getAge()){
             if(this.studentID == o.studentID){
                 return 0;

@@ -11,17 +11,14 @@ public class StudentGroupIterator implements Iterator<Student>{
         this.counter = 0;
     }
     @Override
-    public boolean hasNext() {
+    public boolean hasNext(){
         return counter < students.size();
     }
     @Override
-    public Student next() {
+    public Student next(){
         if(!hasNext()){
             return null;
         }
-        
         return students.get(counter ++);
     }
-    
-    
 }
