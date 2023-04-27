@@ -1,8 +1,19 @@
 package StudentDomen;
+/*
+ * Класс для студентаб наследуется от User 
+ * с использованием интерфейса Comparable
+ */
 
 public class Student extends User implements Comparable<Student>{
+    //персональный номер студента
     private long studentID;
-
+    /*
+     * конструктор класса для студента
+     * @param firstName это имя студента
+     * @param lastName это фамилия студента
+     * @param age это возраст студента
+     * @param studentID это персональный номер студента
+     */
     public Student(String firstName, String lastName, int age, long studentID) {
         super(firstName, lastName, age);
         this.studentID = studentID;
@@ -16,7 +27,7 @@ public class Student extends User implements Comparable<Student>{
     public void setStudentID(long studentID) {
         this.studentID = studentID;
     }
-
+    // переопределение вывода информации о студенте
     @Override
     public String toString() {
         return "Student: " + "firstName = " + super.getFirstName()
@@ -24,7 +35,7 @@ public class Student extends User implements Comparable<Student>{
                 +", age = " + super.getAge() + ", studentID = " + studentID;
     }
 
-
+    // сравниваем студентов по персональным номерам и возрасту
     @Override
     public int compareTo(Student o){
         

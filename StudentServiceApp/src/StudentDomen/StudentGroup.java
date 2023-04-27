@@ -3,9 +3,18 @@ package StudentDomen;
 import java.util.Iterator;
 import java.util.List;
 
-
+/*
+ * Класс для групп студентов с использованием
+ * интерфейсов Iterable, Comparable
+ */
 public class StudentGroup  implements Iterable<Student>, Comparable<StudentGroup>{
+    //список студентов
     private List<Student> students;
+    // конструктор класса для групп студентов
+    //@ param students это список студентов
+    public StudentGroup(List<Student> students) {
+        this.students = students;
+    }
 
     public List<Student> getStudents() {
         return students;
@@ -14,16 +23,13 @@ public class StudentGroup  implements Iterable<Student>, Comparable<StudentGroup
     public void setStudents(List<Student> students) {
         this.students = students;
     }
-
-    public StudentGroup(List<Student> students) {
-        this.students = students;
-    }
-    //переопределяем итератор
+    
+    //итератора по списку студентов
     @Override
     public Iterator<Student> iterator() {
         return new StudentGroupIterator(students);
     }
-
+    // сравниваем группы студентов
     @Override
     public int compareTo(StudentGroup o) {
         if (this.students.size() == o.students.size()){
@@ -34,6 +40,7 @@ public class StudentGroup  implements Iterable<Student>, Comparable<StudentGroup
         }
         return 1;
     }
+    //переопределяем вывод списка групп
     @Override
     public String toString() {
         String string = "";

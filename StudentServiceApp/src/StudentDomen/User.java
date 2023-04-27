@@ -1,10 +1,18 @@
 package StudentDomen;
-// Базовый класс
+// Базовый класс для пользователя
 public class User {
+    // имя пользователя
     private String firstName;
+    // фамилия пользователя
     private String lastName;
+    // возраст пользователя
     private int age;
-
+    /*
+     * конструктор для класса пользователя
+     * @param firstName это имя пользователя
+     * @param lastName это фамилия пользователя
+     * @param это возраст пользователя
+     */
     public User(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,7 +42,7 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
-
+    // переопределение вывода пользователя
     @Override
     public String toString() {
         return "User: " +
