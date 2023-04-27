@@ -44,7 +44,7 @@ public class StudentGroup  implements Iterable<Student>, Comparable<StudentGroup
     @Override
     public String toString() {
         String string = "";
-        for (Student  student: students) {
+        for (Student  student : students) {
             string = "Group: " +  "Student: " + "firstName = " + student.getFirstName()
             +", lastName = " + student.getLastName()
             +", age = " + student.getAge() + ", studentID = " + student.getStudentID();

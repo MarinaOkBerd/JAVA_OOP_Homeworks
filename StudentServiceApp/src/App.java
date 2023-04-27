@@ -53,29 +53,21 @@ public class App {
         listSteam.add(group);
         listSteam.add(group2);
         listSteam.add(group3);
-        Collections.sort(group.getStudents());
-        Collections.sort(group2.getStudents());
-        Collections.sort(group3.getStudents());
-
-        List<StudentGroup> listGroup = new ArrayList<>();
-        StudentSteam steam1 = new StudentSteam(listGroup, "All students");
         
-        Collections.sort(group.getStudents());
-        Collections.sort(group2.getStudents());
-        Collections.sort(group3.getStudents());
-        System.out.println("!!!!!!!!!!!!");
+        
+        StudentSteam steam1 = new StudentSteam(listSteam, "All students");
+        
         Collections.sort(steam1.getGroups());
-        for (StudentGroup group_ : steam1){
-            Collections.sort(group_.getStudents());
+        Collections.sort(group.getStudents());
+        Collections.sort(group2.getStudents());
+        Collections.sort(group3.getStudents());
+        
+        
+        for (StudentGroup group_: steam1){
+            System.out.println(group_);
         }
         
-        for (StudentGroup group_ : steam1) {
-            System.out.println("");
-            
-            for (Student stud : group_) {
-                System.out.println(stud);
-            }
-        }
+        //System.out.println(steam1);
         
         //for(Student student : group){
         //    System.out.println(student);
