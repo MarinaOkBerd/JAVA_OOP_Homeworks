@@ -6,8 +6,8 @@ public class Teacher extends User{
 
     public Teacher(String firstName, String lastName, int age, int teacherId, String academicDegree ) {
         super(firstName, lastName, age);
-       this.teacherId = teacherId;
-       this.academicDegree = academicDegree;
+        this.teacherId = teacherId;
+        this.academicDegree = academicDegree;
     }
 
     public int getTeacherId() {
