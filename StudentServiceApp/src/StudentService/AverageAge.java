@@ -1,17 +1,16 @@
 package StudentService;
 
+import java.util.List;
+
 import StudentDomen.User;
+// Обобщенный класс для получения среднего возраста для наследуемых классов от User
 
-public class AverageAge <T extends User> double {
-    
-
-    
-}
-static public <T extends Number> double mean(T[] num){
-    double sum = 0.0;
-    for (int i = 0; i < num.length; i++) {
-        sum = sum + num[i].doubleValue();
+public class AverageAge <T extends User>{
+    public <T extends User> double getAverageAge(List<T> users){
+        int sumAge = 0;
+        for (T user : users) {
+            sumAge += user.getAge();
+        }
+        return sumAge / users.size();
     }
-    sum = sum / num.length;
-    return sum;
 }
