@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Controller.Controller;
+import Controller.iGetModel;
+import Controller.iGetView;
+import Model.FileRepo;
 import Model.Model;
 import Model.Student;
 import View.View;
@@ -19,8 +22,15 @@ public class App {
         students.add(s3);
         students.add(s4);
         students.add(s5);
-        Model model = new Model(students);
-        View view = new View();
+        FileRepo fileRepo = new FileRepo("StudentsData.txt");
+        //for(Student pers : students){
+        //    fileRepo.addStudent(pers);
+        //}
+        fileRepo.saveAllStusentsToFile();
+        iGetModel model = new Model(students);
+        iGetModel modelFileRepo = new FileRepo("StudentsData.txt");
+        
+        iGetView view = new View();
         Controller controller = new Controller(view, model);
         controller.updateView();
 

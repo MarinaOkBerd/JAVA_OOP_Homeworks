@@ -12,17 +12,41 @@ public class Controller {
     //копия списка студентов
     private List<Student> students;
     //ссылка для view
-    private View view;
+    private iGetView view;
     //ссылка для model
-    private Model model;
-    public Controller(View view, Model model) {
+    private iGetModel model;
+    public Controller(iGetView view, iGetModel model) {
         this.view = view;
         this.model = model;
         this.students = new ArrayList<Student>();
     }
-    // обновляем данные в view
+    // получаем из model студентов в контроллер
+    public void getAllStudent(){
+        students = model.getAllStudent();
+    }
+    //проверяем наличие в базе данных
+    public boolean testData(){
+        if(students.size() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    // получаем данные от model, проверяем данные и обновляем view
     public void updateView(){
-        view.printAllStudent(model.getAllStudent());
+        //MVP
+        getAllStudent();
+        if(testData()){
+            view.printAllStudent(students);
+        }
+        else{
+            System.out.println("Список студентов отсутствует.");
+        }
+        //MVC
+        // обновляем данные в view
+        //view.printAllStudent(model.getAllStudent());
     }
 
 }
