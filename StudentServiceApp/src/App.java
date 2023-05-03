@@ -51,6 +51,7 @@ public class App {
         AverageAge<Teacher> averageAgeTeachers = new AverageAge<>();
         System.out.println(averageAgeTeachers.getAverageAge(listTeachers));
 
+        
         //Student s101 = new Student("Chistina","Aguilera", 31, 555);
         //Student s102 = new Student("Britney","Spears", 35, 666);
         //Student s103 = new Student("Jennifer","Lopez", 38, 777);
