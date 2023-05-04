@@ -7,14 +7,14 @@ import Controller.iGetView;
 import Model.Student;
 
 // Класс для вывода данных и студентах
-public class View implements iGetView{
+public class ViewEng implements iGetView{
     //выводим на печать данные о студентах
     public void printAllStudent(List<Student> students){
-        System.out.println("Вывод списка студентов.");
+        System.out.println("List of students.");
         for(Student person : students){
             System.out.println(person);
         }
-        System.out.println("Конец списка.");
+        System.out.println("End of list students.");
     }
     // получаем данные с консоли
     public String prompt(String message){

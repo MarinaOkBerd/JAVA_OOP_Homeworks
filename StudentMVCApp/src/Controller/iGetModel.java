@@ -7,4 +7,5 @@ import Model.Student;
 public interface iGetModel {
     public List<Student> getAllStudent();
     
+    
 }

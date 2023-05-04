@@ -8,6 +8,7 @@ import Model.FileRepo;
 import Model.Model;
 import Model.Student;
 import View.View;
+import View.ViewEng;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -30,9 +31,13 @@ public class App {
         iGetModel model = new Model(students);
         iGetModel modelFileRepo = new FileRepo("StudentsData.txt");
         
-        iGetView view = new View();
-        Controller controller = new Controller(view, model);
-        controller.updateView();
+        //iGetView view = new View();
+        //Controller controller = new Controller(view, model);
+        //controller.run();
+        iGetView view2 = new ViewEng();
+        Controller controller2 = new Controller(view2, model);
+        controller2.run();
+        //controller.updateView();
 
 
         

@@ -47,6 +47,27 @@ public class Controller {
         //MVC
         // обновляем данные в view
         //view.printAllStudent(model.getAllStudent());
+
+    }
+    // получаем команды от пользователя
+    public void run(){
+        Commands com = Commands.NONE;
+        boolean getNewIteration = true;
+        while(getNewIteration){
+            String command = view.prompt("Введите команду ");
+            com = Commands.valueOf(command.toUpperCase());
+            switch(com){
+                case EXIT:
+                    getNewIteration = false;
+                    System.out.println("Выход из программы");
+                    break;
+
+                case LIST:
+                    getAllStudent();
+                    updateView();
+                    break;
+            }
+        }
     }
 
 }
