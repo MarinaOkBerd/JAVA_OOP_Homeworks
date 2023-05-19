@@ -66,6 +66,12 @@ public class Controller {
                     getAllStudent();
                     updateView();
                     break;
+                
+                case DELETE:
+                    Long studentID = view.deleteStudent();
+                    model.deleteStudentID(studentID);
+                    break;
+                    
             }
         }
     }

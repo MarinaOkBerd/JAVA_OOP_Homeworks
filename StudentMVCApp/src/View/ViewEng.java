@@ -22,4 +22,9 @@ public class ViewEng implements iGetView{
         System.out.print(message);
         return in.nextLine();
     }
+    @Override
+    public Long deleteStudent() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteStudent'");
+    }
 }

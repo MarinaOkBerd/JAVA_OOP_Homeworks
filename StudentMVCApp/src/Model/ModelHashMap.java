@@ -1,6 +1,8 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import Controller.iGetModel;
 
@@ -13,7 +15,26 @@ public class ModelHashMap implements iGetModel{
     }
     // получаем из модели данные (список студентов) 
     public List<Student> getAllStudent(){
-        return students;
+        List<Student> listStud = new ArrayList<Student>();
+        for (var stud : students.entrySet())
+            listStud.add(stud.getValue());
+        return listStud;
+    }
+
+    public int deleteStudent(Long studentID){
+        if (students.containsKey(studentID)){
+            students.remove(studentID);
+            return 1;
+        }
+        return -1;
+    }
+    @Override
+    public int deleteStudentID(Long studentID) {
+        if (students.containsKey(studentID)){
+            students.remove(studentID);
+            return 1;
+        }
+        return -1;
     }
 } 
     

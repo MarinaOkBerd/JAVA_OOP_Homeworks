@@ -8,4 +8,5 @@ import Model.Student;
 public interface iGetView {
     void printAllStudent(List<Student> students);
     String prompt(String message);
+    Long deleteStudent();
 }

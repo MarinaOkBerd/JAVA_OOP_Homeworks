@@ -16,5 +16,18 @@ public class Model implements iGetModel{
     public List<Student> getAllStudent(){
         return students;
     }
+
+    public int deleteStudentID(Long id){
+        int i = -1;
+        for(Student stud : students){
+            if (stud.getStudentID() == id){
+                i = students.indexOf(stud);
+            }
+        }
+        students.remove(i);
+        return i;
+    }
+        
+
 }
 
