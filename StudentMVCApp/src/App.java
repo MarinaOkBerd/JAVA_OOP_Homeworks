@@ -44,7 +44,8 @@ public class App {
         iGetModel modelResult = chooseModel();
         iGetView viewResult = chooseLanguege();
         Controller controller = new Controller(viewResult, modelResult);
-        
+        controller.run();
+
 
     }
 

@@ -21,13 +21,7 @@ public class ModelHashMap implements iGetModel{
         return listStud;
     }
 
-    public int deleteStudent(Long studentID){
-        if (students.containsKey(studentID)){
-            students.remove(studentID);
-            return 1;
-        }
-        return -1;
-    }
+    
     @Override
     public int deleteStudentID(Long studentID) {
         if (students.containsKey(studentID)){
