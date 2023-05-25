@@ -50,5 +50,17 @@ public class StudentGroup<T, V, S extends Comparable<S>>  implements Iterable<St
         }
         return string;
     }
+
+    @Override
+    public int compareTo(StudentGroup o) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    }
+
+    @Override
+    public Iterator<Student<T, V, S>> iterator() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'iterator'");
+    }
     
 }
