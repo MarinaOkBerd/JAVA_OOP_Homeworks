@@ -1,7 +1,6 @@
 package Patterns.ComplexCalculator;
 //Класс для Calculator с использованием интерфейса Calculable
 public final class ComplexCalculator implements iCalculable {
-    
     private ComplexNumber primaryArg;
     
     //конструктор для Calculator

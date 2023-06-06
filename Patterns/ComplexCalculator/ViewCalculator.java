@@ -1,15 +1,15 @@
 package Patterns.ComplexCalculator;
 
 import java.util.Scanner;
-
+// Класс для взаимодействия с калькулятором
 public class ViewCalculator {
-
+    
     private iCalculableFactory calculableFactory;
-
+    // конструктор для фабрики калькуляторов
     public ViewCalculator(iCalculableFactory calculableFactory) {
         this.calculableFactory = calculableFactory;
     }
-
+    // запускаем метод для взаимодействия с калькулятором
     public void run() {
         while (true) {
             ComplexNumber primaryArg = promptComplexNumber("Введите первый аргумент: ");

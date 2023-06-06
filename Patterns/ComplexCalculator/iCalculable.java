@@ -1,5 +1,5 @@
 package Patterns.ComplexCalculator;
-
+// интерфейс для действий калькулятора
 public interface iCalculable {
 
     iCalculable sum(ComplexNumber arg);
